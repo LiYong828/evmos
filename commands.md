@@ -1,0 +1,1 @@
+evmosd tx staking create-validator   --amount=1000000000000atevmos   --pubkey=$(evmosd tendermint show-validator)   --moniker="LYEvmos"   --chain-id="blockx_12346-1"   --commission-rate="0.10"   --commission-max-rate="0.20"   --commission-max-change-rate="0.01"   --min-self-delegation="1000000"   --gas="auto"   --gas-prices="0.025atevmos"   --from=LY --keyring-backend=file

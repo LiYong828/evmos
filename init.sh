@@ -1,7 +1,7 @@
-KEY="mykey"
-CHAINID="evmos_9000-1"
-MONIKER="localtestnet"
-KEYRING="test"
+KEY="LY4"
+CHAINID="blockx_12346-1"
+MONIKER="LY-POWERVPS"
+KEYRING="file"
 KEYALGO="eth_secp256k1"
 LOGLEVEL="info"
 # to trace evm
@@ -50,7 +50,7 @@ cat $HOME/.evmosd/config/genesis.json | jq -r --arg current_date "$current_date"
 
 # Claim module account:
 # 0xA61808Fe40fEb8B3433778BBC2ecECCAA47c8c47 || evmos15cvq3ljql6utxseh0zau9m8ve2j8erz89m5wkz
-cat $HOME/.evmosd/config/genesis.json | jq -r --arg amount_to_claim "$amount_to_claim" '.app_state["bank"]["balances"] += [{"address":"evmos15cvq3ljql6utxseh0zau9m8ve2j8erz89m5wkz","coins":[{"denom":"aevmos", "amount":$amount_to_claim}]}]' > $HOME/.evmosd/config/tmp_genesis.json && mv $HOME/.evmosd/config/tmp_genesis.json $HOME/.evmosd/config/genesis.json
+cat $HOME/.evmosd/config/genesis.json | jq -r --arg amount_to_claim "$amount_to_claim" '.app_state["bank"]["balances"] += [{"address":"evmos10atc8a7u0lyt5yzd0xj5z2py2fmg242s8uudn9","coins":[{"denom":"aevmos", "amount":$amount_to_claim}]}]' > $HOME/.evmosd/config/tmp_genesis.json && mv $HOME/.evmosd/config/tmp_genesis.json $HOME/.evmosd/config/genesis.json
 
 # disable produce empty block
 if [[ "$OSTYPE" == "darwin"* ]]; then
